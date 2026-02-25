@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PulsePoint CIS – Nurse Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="nurse">
+
+  <header>
+    <h1>PulsePoint CIS</h1>
+    <div>
+      Logged in as: <strong id="show-role"></strong> (ID: <span id="show-pid"></span>)
+      &nbsp;
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <div class="page-layout">
+
+    <div class="sidebar">
+      <a href="nurse.html" class="active">Dashboard</a>
+      <a href="#">Bed Management</a>
+      <a href="#">Medication Orders</a>
+      <a href="#">Alerts</a>
+      <a href="#">Patient Records</a>
+    </div>
+
+    <div class="dashboard">
+      <div class="top-bar">
+        <h2>Nurse Dashboard</h2>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Active Alerts</h3>
+          <div class="number" style="color: red;">7</div>
+          <div class="note">3 critical, 4 routine</div>
+        </div>
+        <div class="card">
+          <h3>Available Beds</h3>
+          <div class="number" style="color: #2980b9;">14</div>
+          <div class="note">Out of 62 total</div>
+        </div>
+        <div class="card">
+          <h3>Pending Orders</h3>
+          <div class="number" style="color: orange;">23</div>
+          <div class="note">8 need verification</div>
+        </div>
+        <div class="card">
+          <h3>DB Status</h3>
+          <div class="number" style="color: green; font-size: 1.4rem;">Online</div>
+          <div class="note">All systems OK</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>2025 PulsePoint CIS</p>
+  </footer>
+
+  <script src="guard.js"></script>
+  <script src="logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PulsePoint CIS – Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+
+  <header>
+    <h1>PulsePoint CIS</h1>
+    <div>
+      Logged in as: <strong id="show-role"></strong> (ID: <span id="show-pid"></span>)
+      &nbsp;
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <div class="page-layout">
+
+    <div class="sidebar">
+      <a href="admin.html" class="active">Dashboard</a>
+      <a href="#">Bed Management</a>
+      <a href="#">Medication Orders</a>
+      <a href="#">Access Logs</a>
+      <a href="#">Settings</a>
+    </div>
+
+    <div class="dashboard">
+      <div class="top-bar">
+        <h2>Admin Dashboard</h2>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Active Alerts</h3>
+          <div class="number" style="color: red;">7</div>
+          <div class="note">3 critical, 4 routine</div>
+        </div>
+        <div class="card">
+          <h3>Available Beds</h3>
+          <div class="number" style="color: #2980b9;">14</div>
+          <div class="note">Out of 62 total</div>
+        </div>
+        <div class="card">
+          <h3>Pending Orders</h3>
+          <div class="number" style="color: orange;">23</div>
+          <div class="note">8 need verification</div>
+        </div>
+        <div class="card">
+          <h3>DB Status</h3>
+          <div class="number" style="color: green; font-size: 1.4rem;">Online</div>
+          <div class="note">All systems OK</div>
+        </div>
+      </div>
+
+      <h2 id="staff-directory" style="margin-top: 30px;">Staff Directory</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Role</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>A001</td>
+          <td>Dr. Margaret Chen</td>
+          <td>Administration</td>
+          <td>Admin</td>
+          <td>On Duty</td>
+        </tr>
+        <tr>
+          <td>N001</td>
+          <td>Nurse Sarah Okafor</td>
+          <td>Cardiac Care</td>
+          <td>Nurse</td>
+          <td>On Duty</td>
+        </tr>
+        <tr>
+          <td>N002</td>
+          <td>Nurse James Patel</td>
+          <td>Neuro ICU</td>
+          <td>Nurse</td>
+          <td>On Duty</td>
+        </tr>
+        <tr>
+          <td>N003</td>
+          <td>Nurse Amara Singh</td>
+          <td>Pediatrics</td>
+          <td>Nurse</td>
+          <td>On Break</td>
+        </tr>
+        <tr>
+          <td>A002</td>
+          <td>Dr. Luis Reyes</td>
+          <td>Administration</td>
+          <td>Admin</td>
+          <td>Off Duty</td>
+        </tr>
+        <tr>
+          <td>N004</td>
+          <td>Nurse Elena Vasquez</td>
+          <td>Surgical Recovery</td>
+          <td>Nurse</td>
+          <td>On Duty</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>2025 PulsePoint CIS</p>
+  </footer>
+
+  <script src="guard.js"></script>
+  <script src="logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PulsePoint CIS – Access Denied</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>PulsePoint CIS</h1>
+  </header>
+
+  <main>
+    <div class="error-page">
+      <h2>Security Incident</h2>
+      <p id="reason-msg">You do not have permission to view this page.</p>
+
+      <div class="warning-box">
+        <strong>HIPAA Compliance Warning</strong><br><br>
+        Unauthorized access to this system is strictly prohibited!
+      </div>
+
+      <button class="reset-btn" onclick="resetSession()">Reset Session and Go to Login</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>2025 PulsePoint CIS</p>
+  </footer>
+
+  <script src="logout.js"></script>
+  <script>
+    var reason = new URLSearchParams(window.location.search).get("reason");
+    if (reason === "no_session") {
+      document.getElementById("reason-msg").textContent = "No active session found. Please log in first.";
+    }
+    if (reason === "unauthorized") {
+      document.getElementById("reason-msg").textContent = "Your role does not have access to this page.";
+    }
+  </script>
+</body>
+</html>

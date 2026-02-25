@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PulsePoint CIS – Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>PulsePoint CIS</h1>
+    <nav>
+      <a href="index.html">Back to Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="login-box">
+      <h2>Staff Login</h2>
+      <p style="font-size:0.8rem; color:#777;">
+        Nurse: N001 / Nurse@123 &nbsp;|&nbsp; Admin: A001 / Admin@123
+      </p>
+
+      <form id="login-form">
+
+        <label>Role</label>
+        <select id="role">
+          <option value="" disabled selected>Select a role...</option>
+          <option value="Nurse">Nurse</option>
+          <option value="Admin">Admin</option>
+        </select>
+
+        <label>Practitioner ID</label>
+        <input type="text" id="practitioner-id" placeholder="e.g. N001">
+
+        <label>Password</label>
+        <div class="pw-row">
+          <input type="password" id="password" placeholder="Enter password">
+          <button type="button" id="toggle-btn">Show</button>
+        </div>
+
+        <div class="strength-bar">
+          <div class="strength-fill" id="strength-fill"></div>
+        </div>
+        <div class="strength-text" id="strength-text"></div>
+
+        <button type="submit">Login</button>
+
+        <div class="error-msg" id="error-msg"></div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>2025 PulsePoint CIS</p>
+  </footer>
+
+  <script src="auth.js"></script>
+</body>
+</html>
